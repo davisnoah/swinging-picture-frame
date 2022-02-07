@@ -1,0 +1,104 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-frame: #ADD8E6;
+  --clr-border: #334A52;
+  --clr-string: #FCFCD4;
+  --clr-bg: #002E39;
+  --clr-pin: #00A7DC;
+  
+  --frame-height: 16rem;
+  --frame-width: 12rem;
+  
+  --string-height: 2px;
+  
+  --pin-width: 15px;
+  --pin-height: 35%;
+  
+  --string-offset: 10px;
+
+  --br: 7.5px;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  background: var(--clr-bg);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.frame {
+  position: relative;
+  width: var(--frame-width);
+  height: var(--frame-height);
+  background: var(--clr-frame);
+  border-radius: var(--br);
+  transform-origin: 50% -35%;
+  animation: rock 1500ms both infinite ease-in-out;
+}
+
+.string-left, .string-right {
+  position: absolute;
+  background: var(--clr-string);
+  height: var(--string-height);
+}
+
+.string-left {
+  top: 0;
+  left: var(--string-offset);
+  transform-origin: 0px;
+}
+
+.string-right {
+  top: 0;
+  right: var(--string-offset);
+  transform-origin: 100%;
+}
+
+.front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--clr-frame);
+  border-radius: var(--br);
+  border: 10px solid var(--clr-pin);
+  cursor: default;
+  transition: 300ms box-shadow;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.front:hover {
+  box-shadow: 0 0 40px rgba(0, 0, 0, .75);
+}
+
+.front p {
+  font-size: 5rem;
+  color: var(--clr-bg);
+}
+
+.pin {
+  position: absolute;
+  left: 50%;
+  top: calc(var(--pin-height) * -1);
+  transform: translate(-50%, -25%);
+  border-radius: 100%;
+  width: var(--pin-width);
+  height: var(--pin-width);
+  background: var(--clr-pin);
+}
+
+@keyframes rock {
+  0%, 100% {transform: rotate(30deg);}
+  50% {transform: rotate(-30deg);}
+}
