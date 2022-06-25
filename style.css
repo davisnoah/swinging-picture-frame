@@ -15,14 +15,14 @@
   --frame-height: 16rem;
   --frame-width: 12rem;
   
-  --string-height: 2px;
+  --string-height: 0.125rem;
   
-  --pin-width: 15px;
+  --pin-width: 1.25rem;
   --pin-height: 35%;
   
   --string-offset: 10px;
 
-  --br: 7.5px;
+  --br: 0.625rem;
 }
 
 .main {
