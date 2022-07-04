@@ -31,8 +31,17 @@
   background: var(--clr-bg);
   
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+}
+
+.main > * {
+	flex-basis: 100%;
+}
+
+.frame-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .frame {
