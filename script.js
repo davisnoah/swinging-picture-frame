@@ -1,9 +1,9 @@
 const calcStringStyles = () => {
 	// gets required elements for string width and angle calculation
-	const frame = document.getElementsByClassName("frame")[0];
-	const stringLeft = document.getElementsByClassName("string-left")[0];
-	const stringRight = document.getElementsByClassName("string-right")[0];
-	const pin = document.getElementsByClassName("pin")[0];
+	const frame = document.querySelector(".frame");
+	const stringLeft = document.querySelector(".string-left");
+	const stringRight = document.querySelector(".string-right");
+	const pin = document.querySelector(".pin");
 
 	// gets required styles for string width and angle calculation
 	const pinTop = parseInt(getComputedStyle(pin).getPropertyValue('top'), 10);
