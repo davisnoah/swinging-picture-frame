@@ -25,10 +25,20 @@
   --br: 0.625rem;
 }
 
+body {
+	background-color: var(--clr-bg);
+}
+
+h1 {
+	font-size: 5rem;
+	color: #fff;
+	text-align: center;
+	margin-top: 2rem;
+}
+
 .main {
   width: 100vw;
   height: 100vh;
-  background: var(--clr-bg);
   
   display: flex;
   justify-content: space-between;
@@ -46,12 +56,17 @@
 	gap: 2rem;
 }
 
+.controls h2 {
+	font-size: 3rem;
+	color: #fff;
+}
+
 .controls label, .controls input {
 	display: block;
 }
 
 .controls label {
-	color: #fff;
+	color: #fffa;
 }
 
 .controls input {
