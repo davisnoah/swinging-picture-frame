@@ -15,14 +15,14 @@
   --frame-height: 16rem;
   --frame-width: 12rem;
   
-  --string-height: 2px;
+  --string-height: 0.125rem;
   
   --pin-width: 15px;
-  --pin-height: 35%;
+  --pin-top: 60%;
   
   --string-offset: 10px;
 
-  --br: 7.5px;
+  --br: 0.625rem;
 }
 
 .main {
@@ -41,7 +41,7 @@
   height: var(--frame-height);
   background: var(--clr-frame);
   border-radius: var(--br);
-  transform-origin: 50% -35%;
+  transform-origin: 50% calc(-1 * var(--pin-top));
   animation: rock 1500ms both infinite ease-in-out;
 }
 
@@ -70,7 +70,6 @@
   background: var(--clr-frame);
   border-radius: var(--br);
   border: 10px solid var(--clr-pin);
-  cursor: default;
   transition: 300ms box-shadow;
 
   display: flex;
@@ -90,7 +89,7 @@
 .pin {
   position: absolute;
   left: 50%;
-  top: calc(var(--pin-height) * -1);
+  top: calc(var(--pin-top) * -1);
   transform: translate(-50%, -25%);
   border-radius: 100%;
   width: var(--pin-width);
