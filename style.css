@@ -38,6 +38,26 @@
 	flex-basis: 100%;
 }
 
+.controls {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+}
+
+.controls label, .controls input {
+	display: block;
+}
+
+.controls label {
+	color: #fff;
+}
+
+.controls input {
+	width: 15rem;
+}
+
 .frame-container {
 	display: flex;
 	align-items: center;
