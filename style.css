@@ -18,7 +18,7 @@
   --string-height: 0.125rem;
   
   --pin-width: 15px;
-  --pin-top: 35%;
+  --pin-top: 5.5rem;
   
   --string-offset: 10px;
 
@@ -86,6 +86,7 @@ h1 {
   position: relative;
   width: var(--frame-width);
   height: var(--frame-height);
+	margin-top: var(--pin-top);
   background: var(--clr-frame);
   border-radius: var(--br);
   transform-origin: 50% calc(-1 * var(--pin-top));
