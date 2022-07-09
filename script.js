@@ -29,4 +29,31 @@ const calcStringStyles = () => {
 	stringLeft.style.transform = `rotate(${stringAngleLeft}deg) translateY(-25%)`;
 	stringRight.style.transform = `rotate(${stringAngleRight}deg) translateY(-25%)`;
 }
-calcStringStyles();
+
+const updateFrame = (elem) => {
+	// gets reference to root of document
+	const root = document.querySelector(':root');
+	
+	// gets references to different controls
+	const stringLength = document.querySelector('#string-length');
+	const pinWidth = document.querySelector('#pin-size');
+	const frameWidth = document.querySelector('#frame-width');
+	const frameLength = document.querySelector('#frame-length');
+	
+	// checks what controls were called updateFrame() and update appropriate root property
+	if (elem === stringLength) {
+		root.style.setProperty('--pin-top', `${2 + (elem.value * 0.07)}rem`);
+	} else if (elem === pinWidth) {
+		root.style.setProperty('--pin-width', `${elem.value * 0.3}px`);
+	} else if (elem === frameWidth) {
+		root.style.setProperty('--frame-width', `${8.16 + elem.value * 0.0768}rem`);
+	} else if (elem === frameLength) {
+		root.style.setProperty('--frame-height', `${5 + elem.value * 0.22}rem`)
+	}
+	
+	// update string lengths and angles
+	calcStringStyles();
+}
+
+// calls updateFrame() to calculate initial string lengths and angles
+updateFrame();
