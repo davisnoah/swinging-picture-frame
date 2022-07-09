@@ -38,7 +38,7 @@ const updateFrame = (elem) => {
 	const stringLength = document.querySelector('#string-length');
 	const pinWidth = document.querySelector('#pin-size');
 	const frameWidth = document.querySelector('#frame-width');
-	const frameLength = document.querySelector('#frame-length');
+	const frameHeight = document.querySelector('#frame-height');
 	
 	// checks what controls were called updateFrame() and update appropriate root property
 	if (elem === stringLength) {
@@ -47,7 +47,7 @@ const updateFrame = (elem) => {
 		root.style.setProperty('--pin-width', `${elem.value * 0.3}px`);
 	} else if (elem === frameWidth) {
 		root.style.setProperty('--frame-width', `${8.16 + elem.value * 0.0768}rem`);
-	} else if (elem === frameLength) {
+	} else if (elem === frameHeight) {
 		root.style.setProperty('--frame-height', `${5 + elem.value * 0.22}rem`)
 	}
 	
