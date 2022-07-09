@@ -17,7 +17,7 @@ const calcStringStyles = () => {
 	// calculates the width of the strings
 	const stringWidth = Math.sqrt(stringHorizComp**2 + stringVertComp**2).toFixed(2) + 3;
 
-	// sets newly calculated width as the width of the left and right strings.
+	// sets newly calculated width as the width of the left and right strings
 	stringLeft.style.setProperty('width', `${stringWidth}px`);
 	stringRight.style.setProperty('width', `${stringWidth}px`);
 
@@ -25,7 +25,7 @@ const calcStringStyles = () => {
 	const stringAngleLeft = Math.atan(stringVertComp/stringHorizComp) * 180/Math.PI * -1;
 	const stringAngleRight = Math.atan(stringVertComp/stringHorizComp) * 180/Math.PI;
 
-	// sets newly calculated angles as the angles for the left and right strings.st
+	// sets newly calculated angles as the angles for the left and right strings
 	stringLeft.style.transform = `rotate(${stringAngleLeft}deg) translateY(-25%)`;
 	stringRight.style.transform = `rotate(${stringAngleRight}deg) translateY(-25%)`;
 }
