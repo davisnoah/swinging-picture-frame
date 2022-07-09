@@ -1,3 +1,4 @@
 # swinging-picture-frame
 
-This project involves a easily customizable (in CSS) swinging picture frame that has the text "Hi!" inside. It was created using a combination of HTML, CSS and JavaScript. 
+This project has a picture frame that swings perpetually.
+It also has controls on the left that manipulate the size values of the different components of the picture frame.
