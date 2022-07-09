@@ -1,9 +1,17 @@
+/* -------------------- */
+/* Resets							  */
+/* -------------------- */
+
 *, *::before, *::after {
   margin: 0;
   padding: 0;
   outline: none;
   box-sizing: border-box;
 }
+
+/* -------------------- */
+/* Global Variables 		*/
+/* -------------------- */
 
 :root {
   --clr-frame: #ADD8E6;
@@ -25,6 +33,12 @@
   --br: 0.625rem;
 }
 
+
+/* -------------------- */
+/* Main								  */
+/* -------------------- */
+
+
 body {
 	background-color: var(--clr-bg);
 	min-height: 100vh;
@@ -39,6 +53,8 @@ h1 {
 	margin-top: 2rem;
 }
 
+/* main */
+
 .main {
   width: 100vw;
   
@@ -50,6 +66,8 @@ h1 {
 .main > * {
 	flex-basis: 100%;
 }
+
+/* controls section */
 
 .controls {
 	display: flex;
@@ -75,6 +93,8 @@ h1 {
 .controls input {
 	width: 15rem;
 }
+
+/* frame section */
 
 .frame-container {
 	display: flex;
